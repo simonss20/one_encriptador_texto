@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f5fc;
+    font-family: 'Inter';
+    color: #0a3871;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.contenedor  .header,
+.contenedor .seccion_ingreso,
+.contenedor .seccion_retorno,
+.contenedor .footer {
+    padding: 40px;
+    display: flex;
+}
+
+.contenedor .header {
+    grid-column: span 3;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+}
+
+.ingreso, .retorno {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0a3871;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+::placeholder {
+    color: #0a3871;
+}
+
+.contenedor .seccion_ingreso {
+    grid-column: span 2;
+    grid-row: span 2;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ingreso {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f5fc;
+}
+
+.informacion {
+    color: #6b7178;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.botones, .seccion_copiar {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.encriptar,
+.desencriptar, 
+.copiar {
+    flex-grow: 1;
+    height: 3em;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    height: 67px;
+    font-size: 24px;
+}
+
+.encriptar:hover,
+.desencriptar:hover, 
+.copiar:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.encriptar  {
+    background-color: #0a3871;
+    color: #ffffff;
+}
+
+.desencriptar {
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+
+
+.contenedor .seccion_retorno {
+    background-color: #ffffff;
+    border-radius: 20px;
+    grid-row: span 2;
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.copiar {
+    background-color: #ffffff;
+    color: #0a3871;
+}
+
+.retorno {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.informacion_retorno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    position: relative;
+    bottom: 30%;
+}
+
+
+.seccion_retorno__informacion {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.seccion_retorno__instruccion {
+    font-size: 1.5em;
+    font-weight: 400px;
+}
+
+
+
+.contenedor .footer {
+    grid-column: span 3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    
+    .titulo {
+        font-size: 1.5em;
+    }
+    
+    .botones {
+        flex-direction: column;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contenedor .seccion_ingreso,
+    .contenedor .seccion_retorno {
+        grid-column: span 3;
+    }
+
+    .contenedor .seccion_ingreso {
+        grid-row: span 3;
+        padding: 10px 20px;
+        max-height: fit-content;
+    }
+    
+    .contenedor .seccion_retorno {
+        grid-row: span 1;
+        padding: 10px 20px;
+        max-height: 15em;
+    }
+
+    .ingreso, .retorno {
+        font-size: 16px;
+    }
+
+    .encriptar, .desencriptar, .copiar {
+        height: 34px;
+    }
+
+    .contenedor .header {
+        padding: 5px 0;
+    }
+}
