@@ -84,9 +84,12 @@ function comprobarAncho() {
 
 
 setInterval(() => {
-    comprobarRetorno();
     comprobarAncho();
 }, 50);
+
+setInterval(() => {
+    comprobarRetorno();
+}, 500);
 
 
 ingreso.addEventListener("keyup", function(event) {
