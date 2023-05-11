@@ -72,7 +72,7 @@ function comprobarAncho() {
     if (window.innerWidth > 1024) {
         infoRetorno.style.bottom = "0";
         if (retorno.value === "") {
-            retorno.style.backgroundImage = "url(/assets/media/muneco.png)";
+            retorno.style.backgroundImage = "url(assets/media/muneco.png)";
         } else {
             retorno.style.backgroundImage = "none";
         }
